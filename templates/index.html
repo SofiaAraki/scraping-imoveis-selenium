@@ -4,20 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comparador de Imóveis</title>
-    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="../static/css/style.css">
 </head>
 <body>
     <header>
         <h1>Comparador de Imóveis</h1>
     </header>
     <main>
-        <form id="search-form">
-            <label for="location">Localização:</label>
-            <input type="text" id="location" placeholder="Digite a cidade ou bairro">
-            <button type="submit">Buscar</button>
-        </form>
-        <div id="results"></div>
+        <section>
+            <form id="search-form">
+                <label for="location">Localização:</label>
+                <input 
+                    type="text" 
+                    id="location" 
+                    placeholder="Digite a cidade ou bairro" 
+                    aria-label="Campo de pesquisa de localização"
+                >
+                <button type="submit" aria-label="Buscar imóveis">Buscar</button>
+            </form>
+        </section>
+        <section id="results" aria-live="polite">
+            <!-- Os resultados serão exibidos aqui -->
+        </section>
     </main>
-    <script src="/static/js/script.js"></script>
+    <script src="../static/js/script.js"></script>
 </body>
 </html>

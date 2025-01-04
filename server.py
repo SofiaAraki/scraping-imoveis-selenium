@@ -1,11 +1,8 @@
-import sys
-from pathlib import Path
-
-# Adicionar o diretório raiz ao sys.path
-sys.path.append(str(Path(__file__).parent))
-
-
 from app.api import app
+import logging
+
+logging.basicConfig(level=logging.INFO)
 
 if __name__ == "__main__":
+    logging.info("Iniciando o servidor Flask...")
     app.run(debug=True)
